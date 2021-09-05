@@ -18,7 +18,7 @@ let package = Package(
             path: "Sources/SpotifyiOS/SpotifyiOS.xcframework"),
         .target(
             name: "SpotifyiOSWrapper",
-            dependencies: ["SpotifyiOS"]),
+            dependencies: [.target(name: "SpotifyiOS", condition: .when(platforms: [.iOS]))]),
         .testTarget(
             name: "SpotifyiOSWrapperTests",
             dependencies: ["SpotifyiOSWrapper"])

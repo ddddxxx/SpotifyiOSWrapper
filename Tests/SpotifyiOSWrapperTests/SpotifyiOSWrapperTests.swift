@@ -1,6 +1,8 @@
 import XCTest
 @testable import SpotifyiOSWrapper
 
+#if os(iOS)
+
 final class SpotifyiOSWrapperTests: XCTestCase {
     
     func testExample() {
@@ -12,3 +14,5 @@ final class SpotifyiOSWrapperTests: XCTestCase {
         ("testExample", testExample),
     ]
 }
+
+#endif
